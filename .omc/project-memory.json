@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775392093691,
+  "projectRoot": "/Users/meng/workspace/MoonTV",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "14.2.30",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "18.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "jest",
+        "version": "27.5.1",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": "pnpm test",
+    "lintCommand": "pnpm lint",
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "dev": "pnpm gen:manifest && pnpm gen:runtime && next dev -H 0.0.0.0",
+      "build": "pnpm gen:manifest && pnpm gen:runtime && next build",
+      "start": "next start",
+      "lint": "next lint",
+      "lint:fix": "eslint src --fix && pnpm format",
+      "lint:strict": "eslint --max-warnings=0 src",
+      "typecheck": "tsc --noEmit --incremental false",
+      "test:watch": "jest --watch",
+      "test": "jest",
+      "format": "prettier -w .",
+      "format:check": "prettier -c .",
+      "gen:manifest": "node scripts/generate-manifest.js",
+      "gen:runtime": "node scripts/generate-runtime.js",
+      "postbuild": "echo 'Build completed - sitemap generation disabled'",
+      "prepare": "husky install",
+      "pages:build": "npx @cloudflare/next-on-pages"
+    }
+  },
+  "conventions": {
+    "namingStyle": "camelCase",
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 6,
+      "lastAccessed": 1775392093552,
+      "keyFiles": [
+        "favicon.ico",
+        "logo.png",
+        "mitm.html",
+        "robots.txt",
+        "screenshot1.png"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 3,
+      "lastAccessed": 1775392093552,
+      "keyFiles": [
+        "convert-changelog.js",
+        "generate-manifest.js",
+        "generate-runtime.js"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 1,
+      "lastAccessed": 1775392093564,
+      "keyFiles": [
+        "middleware.ts"
+      ]
+    },
+    "src/app": {
+      "path": "src/app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1775392093565,
+      "keyFiles": [
+        "globals.css",
+        "layout.tsx",
+        "not-found.tsx"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 39,
+      "lastAccessed": 1775392093566,
+      "keyFiles": [
+        "AddDownloadModal.tsx",
+        "BackButton.tsx",
+        "CapsuleSwitch.tsx"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 28,
+      "lastAccessed": 1775392093566,
+      "keyFiles": [
+        "admin.types.ts",
+        "auth.ts",
+        "bangumi.client.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "scripts/sync-config.sh",
+      "accessCount": 5,
+      "lastAccessed": 1775435004977,
+      "type": "file"
+    },
+    {
+      "path": "src",
+      "accessCount": 2,
+      "lastAccessed": 1775393529553,
+      "type": "directory"
+    },
+    {
+      "path": "config.json",
+      "accessCount": 1,
+      "lastAccessed": 1775392113207,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775392113314,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
